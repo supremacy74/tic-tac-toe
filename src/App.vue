@@ -1,26 +1,65 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="wrapper">
+    <div class="container">
+      <Game />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Game from '@/components/Game'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Game
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  color: #0f0f0f;
+}
+
+html,
+body {
+  font-family: 'Heebo', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  background: radial-gradient(circle at 5%, #ff00f5, #ff005f);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: min(100%, 540px);
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.heading {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
